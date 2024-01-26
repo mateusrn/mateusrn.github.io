@@ -1,7 +1,11 @@
 ---
 layout: page
-title: About
+title: Who am I?
 permalink: /about
 ---
 
-Millennial is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused publishing platform for your publication site or blog. You can find everything you need to get started under documentation. For more information on how to install and use this theme, check out [the documentation]({{ site.github.url }}{% post_url 2016-10-10-getting-started %}).
+Hi, thank you for visiting my little corner of the web!
+
+I'm a senior data scientist and math student with a philosophical bent. I live in [Blumenau](https://en.wikipedia.org/wiki/Blumenau) with my beautiful wife and our two dogs. When I'm not taming machine learning models, I enjoy proving theorems, playing with the gymnastics rings and cooking for friends and family.
+
+If you'd like to get in touch, feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/mateus-rigo-noriller-093991172/) or at `<myfirstname><mylastname>@gmail.com`.
