@@ -5,7 +5,7 @@ title: What I'm reading now
 permalink: /bookshelf
 ---
 
-<img align="left" width="75" src="/assets/img/books/aspiration_callard.jpg" />
+<img align="right" width="75" src="/assets/img/books/aspiration_callard.jpg" />
 
 ### Aspiration: the agency of becoming
 _by Agnes Callard_
