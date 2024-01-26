@@ -11,6 +11,7 @@ permalink: /bookshelf
 _by Agnes Callard_
 
 A wonderful account of the rationality behind working to become a different person. Quite heavy for non-philosophers. Hopefully I'm not deluding myself into thinking I understand the book.
+{: style="text-align: justify"}
 
 # Books that changed how I think
 
