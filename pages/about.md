@@ -12,3 +12,5 @@ I'm a senior data scientist and math student with a philosophical bent. I live i
 
 If you'd like to get in touch, feel free to reach out to me on [LinkedIn](https://www.linkedin.com/in/mateus-rigo-noriller-093991172/) or at `<myfirstname><mylastname>@gmail.com`.
 {: style="text-align: justify"}
+
+<img align="center" src="/assets/img/places/canasvieiras_sunset.jpg" />
