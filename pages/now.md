@@ -16,3 +16,4 @@ It's summer break. Next semester I'm taking Abstract Algebra II. So why not revi
 {: style="text-align: justify"}
 
 On top of that, there are a few important topics about finite dimensional normed spaces which I was supposed to have covered last semester. Better late than never, right?. I plan to study compactness and bit of linear operators and linear functionals. Thankfully Erwin Kreyszig has such a fluid and light-hearted style. This makes my job a little easier.
+{: style="text-align: justify"}
