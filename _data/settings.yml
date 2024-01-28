@@ -9,6 +9,7 @@ google-ID: 'UA-112060364-2'
 menu:
 - {name: 'Posts',       url: 'posts'}
 - {name: 'Bookshelf', url: 'bookshelf'}
+- {name: 'Now',              url: 'now'}
 - {name: 'About',              url: 'about'}
 # - {name: 'Contact',            url: 'contact'}
 
