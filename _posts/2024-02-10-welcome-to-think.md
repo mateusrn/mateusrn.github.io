@@ -5,6 +5,7 @@ author: "Mateus Rigo Noriller"
 categories: [posts, documentation]
 tags: [documentation, sample]
 image: places/praia_feiticeira_dez2023.jpg
+permalink: welcome-to-think
 ---
 
 What will this be all about?
