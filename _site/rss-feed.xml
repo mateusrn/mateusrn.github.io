@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<channel>
+		<title>THINK</title>
+		<description>a humble knowledge sharing project</description>
+		<link></link>
+		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Welcome to THINK</title>
+				
+					<dc:creator>Mateus Rigo Noriller</dc:creator>
+				
+				
+					<description>&lt;p&gt;What will this be all about?&lt;/p&gt;
+</description>
+				
+				<pubDate>Sat, 10 Feb 2024 00:00:00 -0300</pubDate>
+				<link>http://localhost:4000/welcome-to-think</link>
+				<guid isPermaLink="true">http://localhost:4000/welcome-to-think</guid>
+			</item>
+		
+	</channel>
+</rss>
