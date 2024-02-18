@@ -17,5 +17,6 @@ If you'd like to get in touch, feel free to reach out to me on [LinkedIn](https:
 {: style="text-align: justify"}
 
 Oh, and by the way: unless mentioned otherwise, all photos were taken by me. I really like them.
+{: style="text-align: justify"}
 
 <img align="center" src="/assets/img/places/canasvieiras_sunset.jpg" />
