@@ -46,29 +46,50 @@ def convert_images(body,note,writing,slug):
         return f'![{src.stem}]({{{{ site.baseurl }}}}/assets/images/{slug}/{target.name})'
     return pat.sub(sub,body)
 
-def convert_wikilinks(body):
+def convert_wikilinks(body,link_map,src_name):
     pat=re.compile(r'(?<!!)\[\[([^\]|#]+)(?:\|([^\]]+))?\]\]')
     def sub(m):
         target=m.group(1).strip(); label=(m.group(2) or target).strip()
-        return f'[{label}]({{{{ site.baseurl }}}}/posts/{slugify(Path(target).stem)}/)'
+        key=Path(target).stem
+        url=link_map.get(key)
+        if url is None:
+            print(f'WARNING: unpublished cross-reference dropped in {src_name}: [[{target}]]')
+            return label
+        return f'[{label}]({{{{ site.baseurl }}}}{url})'
     return pat.sub(sub,body)
 
 def publish(writing):
     pub=writing/'3-published'
     if not pub.is_dir(): raise SystemExit(f'Could not find published folder: {pub}')
-    posts=pages=0
-    for src in sorted(pub.rglob('*.md')):
+    srcs=sorted(pub.rglob('*.md'))
+
+    # Pass 1: figure out the published URL of every note, keyed by filename
+    # stem (how Obsidian wikilinks address notes), so cross-references can be
+    # resolved (or dropped) before any file is written.
+    entries=[]; link_map={}
+    for src in srcs:
         meta,body=parse_frontmatter(src.read_text(encoding='utf-8'))
         title=meta.get('title',src.stem); typ=meta.get('type','post').lower(); slug=slugify(title)
-        body=convert_wikilinks(convert_images(body,src,writing,slug))
         if typ=='page':
             permalink=meta.get('permalink',f'/{slug}/')
+            url=permalink
+        else:
+            dt=meta.get('date',date.fromtimestamp(src.stat().st_mtime).isoformat())
+            url=f'/posts/{slug}/'
+        entries.append((src,meta,body,typ,title,slug,url if typ=='page' else dt))
+        link_map[src.stem]=url
+
+    posts=pages=0
+    for src,meta,body,typ,title,slug,dt_or_permalink in entries:
+        body=convert_wikilinks(convert_images(body,src,writing,slug),link_map,src.relative_to(pub))
+        if typ=='page':
+            permalink=dt_or_permalink
             out=Path(f'{slug}.md') if permalink in ('/about/','/bookshelf/') else Path(permalink.strip('/'))/'index.md'
             out.parent.mkdir(parents=True,exist_ok=True)
             out.write_text(make_fm(meta,title,page=True)+'\n\n'+body.lstrip()+'\n',encoding='utf-8')
             pages+=1; print(f'Published page: {src.relative_to(pub)} -> {out}')
         else:
-            dt=meta.get('date',date.fromtimestamp(src.stat().st_mtime).isoformat()); out=Path('_posts')/f'{dt[:10]}-{slug}.md'
+            dt=dt_or_permalink; out=Path('_posts')/f'{dt[:10]}-{slug}.md'
             out.write_text(make_fm(meta,title,dt)+'\n\n'+body.lstrip()+'\n',encoding='utf-8')
             posts+=1; print(f'Published post: {src.relative_to(pub)} -> {out}')
     print(f'\nDone. Published {posts} post(s) and {pages} page(s).')
