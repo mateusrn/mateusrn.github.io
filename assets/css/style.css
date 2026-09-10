@@ -1,0 +1,199 @@
+/* THINK palette: warm paper / pale sand. */
+html {
+  font-size: 17px;
+}
+
+body {
+  margin: 0;
+  background: #F5F1E8;
+  color: #292722;
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.7;
+}
+
+.site-header {
+  border-bottom: 1px solid #DDD7C9;
+}
+
+.header-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 22px 28px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.site-title {
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .88rem;
+}
+
+nav a {
+  color: #555;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #111;
+}
+
+.site-main {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 70px 28px 100px;
+}
+
+.home-intro,
+.page,
+.post,
+.home > h2,
+.home > ul {
+  max-width: 760px;
+}
+
+.home-intro {
+  margin-bottom: 70px;
+  font-size: 1.08rem;
+}
+
+.page-header,
+.post-header {
+  margin-bottom: 42px;
+}
+
+h1 {
+  margin: 0;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.08;
+  letter-spacing: -.035em;
+}
+
+h2 {
+  margin-top: 3rem;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.35rem;
+}
+
+.post-date,
+.post-list .post-date,
+.home .post-date {
+  color: #888;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .78rem;
+  white-space: nowrap;
+}
+
+.post-header .post-date {
+  margin: 12px 0 0;
+}
+
+a {
+  color: #222;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+p {
+  margin: 0 0 1.35rem;
+}
+
+ul, ol {
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: .45rem;
+}
+
+.post-list {
+  padding: 0;
+  list-style: none;
+}
+
+.post-list li {
+  display: flex;
+  gap: 18px;
+  align-items: baseline;
+  margin-bottom: 13px;
+}
+
+.post-content img,
+.page-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+}
+
+blockquote {
+  margin: 2rem 0;
+  padding-left: 1.25rem;
+  border-left: 2px solid #ddd;
+  color: #555;
+}
+
+pre {
+  overflow-x: auto;
+  padding: 1rem 1.2rem;
+  background: #EDE8DC;
+  border: 1px solid #DDD7C9;
+  border-radius: 3px;
+  font-size: .88rem;
+  line-height: 1.5;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+}
+
+th, td {
+  padding: .55rem .7rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .header-inner {
+    padding: 18px 20px;
+    align-items: center;
+  }
+
+  nav {
+    gap: 14px;
+  }
+
+  .site-main {
+    padding: 48px 20px 70px;
+  }
+
+  .post-list li {
+    display: block;
+  }
+
+  .post-list .post-date {
+    display: block;
+    margin-bottom: 2px;
+  }
+}
