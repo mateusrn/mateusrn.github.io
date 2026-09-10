@@ -1,7 +1,7 @@
 title: THINK
 description: Notes on thinking, learning, science, technology, and human flourishing.
-url: "https://mateusn.github.io"
-baseurl: "/think"
+url: "https://mateusrn.github.io"
+baseurl: ""
 
 markdown: kramdown
 permalink: /posts/:title/
